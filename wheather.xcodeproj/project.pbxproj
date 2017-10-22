@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		180363E91F8E765D00A1A8D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 180363E81F8E765D00A1A8D1 /* main.m */; };
+		180363EC1F8E765D00A1A8D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 180363EB1F8E765D00A1A8D1 /* AppDelegate.m */; };
+		180363F21F8E765D00A1A8D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180363F01F8E765D00A1A8D1 /* Main.storyboard */; };
+		180363F51F8E765D00A1A8D1 /* wheather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 180363F31F8E765D00A1A8D1 /* wheather.xcdatamodeld */; };
+		180363F71F8E765D00A1A8D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180363F61F8E765D00A1A8D1 /* Assets.xcassets */; };
+		180363FA1F8E765D00A1A8D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180363F81F8E765D00A1A8D1 /* LaunchScreen.storyboard */; };
+		180364091F8E79AE00A1A8D1 /* WANetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180364081F8E79AE00A1A8D1 /* WANetworkManager.m */; };
+		1803640C1F8E7FDE00A1A8D1 /* SearchVieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803640B1F8E7FDE00A1A8D1 /* SearchVieController.m */; };
+		A822B22DE2B4855DD8B3ED2A /* Pods_wheather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4FC3A6741727431CFC18EA /* Pods_wheather.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		180363E41F8E765D00A1A8D1 /* wheather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wheather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		180363E81F8E765D00A1A8D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		180363EA1F8E765D00A1A8D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		180363EB1F8E765D00A1A8D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		180363F11F8E765D00A1A8D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		180363F41F8E765D00A1A8D1 /* wheather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wheather.xcdatamodel; sourceTree = "<group>"; };
+		180363F61F8E765D00A1A8D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		180363F91F8E765D00A1A8D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		180363FB1F8E765D00A1A8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		180364071F8E79AE00A1A8D1 /* WANetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WANetworkManager.h; sourceTree = "<group>"; };
+		180364081F8E79AE00A1A8D1 /* WANetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WANetworkManager.m; sourceTree = "<group>"; };
+		1803640A1F8E7FDE00A1A8D1 /* SearchVieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVieController.h; sourceTree = "<group>"; };
+		1803640B1F8E7FDE00A1A8D1 /* SearchVieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVieController.m; sourceTree = "<group>"; };
+		7F4FC3A6741727431CFC18EA /* Pods_wheather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wheather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05357E2EE898715355BE517 /* Pods-wheather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wheather.release.xcconfig"; path = "Pods/Target Support Files/Pods-wheather/Pods-wheather.release.xcconfig"; sourceTree = "<group>"; };
+		D3DE0345A2F3B0E4F9671035 /* Pods-wheather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wheather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wheather/Pods-wheather.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		180363E11F8E765D00A1A8D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A822B22DE2B4855DD8B3ED2A /* Pods_wheather.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		180363DB1F8E765D00A1A8D1 = {
+			isa = PBXGroup;
+			children = (
+				180363E61F8E765D00A1A8D1 /* wheather */,
+				180363E51F8E765D00A1A8D1 /* Products */,
+				2698F87931448F3D93238D59 /* Pods */,
+				BE13BCEC83CB28B844532E71 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		180363E51F8E765D00A1A8D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				180363E41F8E765D00A1A8D1 /* wheather.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		180363E61F8E765D00A1A8D1 /* wheather */ = {
+			isa = PBXGroup;
+			children = (
+				180364011F8E775B00A1A8D1 /* Source */,
+				180363EA1F8E765D00A1A8D1 /* AppDelegate.h */,
+				180363EB1F8E765D00A1A8D1 /* AppDelegate.m */,
+				180363F01F8E765D00A1A8D1 /* Main.storyboard */,
+				180363F61F8E765D00A1A8D1 /* Assets.xcassets */,
+				180363F81F8E765D00A1A8D1 /* LaunchScreen.storyboard */,
+				180363FB1F8E765D00A1A8D1 /* Info.plist */,
+				180363F31F8E765D00A1A8D1 /* wheather.xcdatamodeld */,
+				180363E71F8E765D00A1A8D1 /* Supporting Files */,
+			);
+			path = wheather;
+			sourceTree = "<group>";
+		};
+		180363E71F8E765D00A1A8D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				180363E81F8E765D00A1A8D1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		180364011F8E775B00A1A8D1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				180364021F8E775B00A1A8D1 /* BaceManager */,
+				180364031F8E775B00A1A8D1 /* Networking */,
+				180364041F8E775B00A1A8D1 /* Presentation */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		180364021F8E775B00A1A8D1 /* BaceManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaceManager;
+			sourceTree = "<group>";
+		};
+		180364031F8E775B00A1A8D1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				180364071F8E79AE00A1A8D1 /* WANetworkManager.h */,
+				180364081F8E79AE00A1A8D1 /* WANetworkManager.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		180364041F8E775B00A1A8D1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				180364051F8E778800A1A8D1 /* DetailInfo */,
+				180364061F8E778800A1A8D1 /* Search */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		180364051F8E778800A1A8D1 /* DetailInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailInfo;
+			sourceTree = "<group>";
+		};
+		180364061F8E778800A1A8D1 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1803640A1F8E7FDE00A1A8D1 /* SearchVieController.h */,
+				1803640B1F8E7FDE00A1A8D1 /* SearchVieController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2698F87931448F3D93238D59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3DE0345A2F3B0E4F9671035 /* Pods-wheather.debug.xcconfig */,
+				A05357E2EE898715355BE517 /* Pods-wheather.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE13BCEC83CB28B844532E71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F4FC3A6741727431CFC18EA /* Pods_wheather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		180363E31F8E765D00A1A8D1 /* wheather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 180363FE1F8E765D00A1A8D1 /* Build configuration list for PBXNativeTarget "wheather" */;
+			buildPhases = (
+				207A1E5D97DF07FA392AB763 /* [CP] Check Pods Manifest.lock */,
+				180363E01F8E765D00A1A8D1 /* Sources */,
+				180363E11F8E765D00A1A8D1 /* Frameworks */,
+				180363E21F8E765D00A1A8D1 /* Resources */,
+				262DC0A45299B763B21AFA11 /* [CP] Embed Pods Frameworks */,
+				1D46F55085B96ABD2E7A9D5C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wheather;
+			productName = wheather;
+			productReference = 180363E41F8E765D00A1A8D1 /* wheather.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		180363DC1F8E765D00A1A8D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Joe Franc";
+				TargetAttributes = {
+					180363E31F8E765D00A1A8D1 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 180363DF1F8E765D00A1A8D1 /* Build configuration list for PBXProject "wheather" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 180363DB1F8E765D00A1A8D1;
+			productRefGroup = 180363E51F8E765D00A1A8D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				180363E31F8E765D00A1A8D1 /* wheather */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		180363E21F8E765D00A1A8D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180363FA1F8E765D00A1A8D1 /* LaunchScreen.storyboard in Resources */,
+				180363F71F8E765D00A1A8D1 /* Assets.xcassets in Resources */,
+				180363F21F8E765D00A1A8D1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D46F55085B96ABD2E7A9D5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wheather/Pods-wheather-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		207A1E5D97DF07FA392AB763 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wheather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		262DC0A45299B763B21AFA11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-wheather/Pods-wheather-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wheather/Pods-wheather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		180363E01F8E765D00A1A8D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180363F51F8E765D00A1A8D1 /* wheather.xcdatamodeld in Sources */,
+				1803640C1F8E7FDE00A1A8D1 /* SearchVieController.m in Sources */,
+				180363EC1F8E765D00A1A8D1 /* AppDelegate.m in Sources */,
+				180364091F8E79AE00A1A8D1 /* WANetworkManager.m in Sources */,
+				180363E91F8E765D00A1A8D1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		180363F01F8E765D00A1A8D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				180363F11F8E765D00A1A8D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		180363F81F8E765D00A1A8D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				180363F91F8E765D00A1A8D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		180363FC1F8E765D00A1A8D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		180363FD1F8E765D00A1A8D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		180363FF1F8E765D00A1A8D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3DE0345A2F3B0E4F9671035 /* Pods-wheather.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = wheather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-JoF-.wheather";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		180364001F8E765D00A1A8D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A05357E2EE898715355BE517 /* Pods-wheather.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = wheather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-JoF-.wheather";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		180363DF1F8E765D00A1A8D1 /* Build configuration list for PBXProject "wheather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180363FC1F8E765D00A1A8D1 /* Debug */,
+				180363FD1F8E765D00A1A8D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		180363FE1F8E765D00A1A8D1 /* Build configuration list for PBXNativeTarget "wheather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180363FF1F8E765D00A1A8D1 /* Debug */,
+				180364001F8E765D00A1A8D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		180363F31F8E765D00A1A8D1 /* wheather.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				180363F41F8E765D00A1A8D1 /* wheather.xcdatamodel */,
+			);
+			currentVersion = 180363F41F8E765D00A1A8D1 /* wheather.xcdatamodel */;
+			path = wheather.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 180363DC1F8E765D00A1A8D1 /* Project object */;
+}
