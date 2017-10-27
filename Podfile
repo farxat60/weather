@@ -6,5 +6,6 @@ target 'wheather' do
   use_frameworks!
 
 pod ‘AFNetworking’
+pod 'SDWebImage'
 
 end

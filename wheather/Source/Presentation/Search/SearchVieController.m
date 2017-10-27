@@ -8,17 +8,27 @@
 
 #import "SearchVieController.h"
 #import "WANetworkManager.h"
+#import "WANetworkingManagerDay.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "detailControllTableViewController.h"
+#import "detailTableViewCell.h"
+
 
 static NSInteger const kcelsius = 273.15;
-static NSString * kcels = @"\u00B0";
+static NSString const * kcels = @"\u00B0";
+static NSString const * kimageIcon = @"http://openweathermap.org/img/w/";
+//static NSInteger const kmmHG = 0.7500616;
 
-@interface SearchVieController () <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface SearchVieController () <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, SDWebImageManagerDelegate>
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBarCity;
 @property (strong, nonatomic) IBOutlet UITableView *tableVIewSearch;
 @property (strong, nonatomic) IBOutlet UILabel *cityLable;
 @property (strong, nonatomic) IBOutlet UILabel *tempLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *iconImg;
-
+@property (strong, nonatomic) IBOutlet UILabel *windLabel;
+@property (strong, nonatomic) IBOutlet UILabel *cloudsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *descrLabel;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *detailsViewController;
 
 
 
@@ -43,24 +53,31 @@ static NSString * kcels = @"\u00B0";
 }
 
 
-
-
-
-
-- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    
-    [[WANetworkManager sharedInstance] loadWeatherForTown:_searchBarCity.text completion:^(NSDictionary *resposeData) {
-        NSLog(@"%@", resposeData[@"weather"]);
-       NSNumber * temperatureNumber = [[resposeData valueForKey:@"main"]objectForKey:@"temp"];
+- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [[WANetworkManagerDay sharedInstance] loadWeatherForTownDay:_searchBarCity.text completion:^(NSDictionary *resposeData) {
+//          self.cityLable.text = [resposeData valueForKeyPath:@"city.name"];
+        NSNumber * temperatureNumber = [[resposeData valueForKey:@"main"]objectForKey:@"temp"];
         temperatureNumber = @([temperatureNumber integerValue] - kcelsius);
         NSString * temperatureString = [temperatureNumber stringValue];
         self.cityLable.text = [resposeData objectForKey:@"name"];
         self.tempLabel.text = [NSString stringWithFormat: @"%@%@",temperatureString,kcels];
-        self.iconImg.image = [[resposeData valueForKey:@"weather[]"]objectForKey:@"icon"];
+        NSString *numberIcon = [[[resposeData valueForKey:@"weather"]objectAtIndex:0]valueForKey:@"icon"];
+        NSLog(@"%@=====", numberIcon);
+        NSString *url = [NSString stringWithFormat:@"http://openweathermap.org/img/w/%@.png",numberIcon];
+        [self.iconImg sd_setImageWithURL:[NSURL URLWithString:url]];
+        NSNumber *numberWind = [[resposeData valueForKey:@"wind"]objectForKey:@"speed"];
+        self.windLabel.text = [NSString stringWithFormat:@"wind: %@ m/s",numberWind];
+        NSNumber *numberClouds = [[resposeData valueForKey:@"clouds"]valueForKey:@"all"];
+        self.cloudsLabel.text = [NSString stringWithFormat:@"clouds: %@ %%",numberClouds];
+        NSString * descriprions = [[[resposeData valueForKey:@"weather"]objectAtIndex:0]valueForKey:@"description"];
+        self.descrLabel.text = descriprions;
+        
+        
+        
         
     }];
-}
 
+}
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -76,7 +93,16 @@ static NSString * kcels = @"\u00B0";
     NSString *str = @"";
     cell.textLabel.text = str;
     return cell;
+    
 }
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"detailWeather"]){
+         detailControllTableViewController*vc = segue.destinationViewController;
+        vc.detailSearchBarCity = _cityLable.text;
+        
+    }
+}
+
 
 
 

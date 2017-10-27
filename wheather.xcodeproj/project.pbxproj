@@ -15,6 +15,9 @@
 		180363FA1F8E765D00A1A8D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180363F81F8E765D00A1A8D1 /* LaunchScreen.storyboard */; };
 		180364091F8E79AE00A1A8D1 /* WANetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180364081F8E79AE00A1A8D1 /* WANetworkManager.m */; };
 		1803640C1F8E7FDE00A1A8D1 /* SearchVieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803640B1F8E7FDE00A1A8D1 /* SearchVieController.m */; };
+		180364B91FA168E500A1A8D1 /* WANetworkingManagerDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 180364B81FA168E500A1A8D1 /* WANetworkingManagerDay.m */; };
+		180364BC1FA2673300A1A8D1 /* detailControllTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180364BB1FA2673300A1A8D1 /* detailControllTableViewController.m */; };
+		180364BF1FA36C3A00A1A8D1 /* detailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180364BE1FA36C3A00A1A8D1 /* detailTableViewCell.m */; };
 		A822B22DE2B4855DD8B3ED2A /* Pods_wheather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4FC3A6741727431CFC18EA /* Pods_wheather.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,12 @@
 		180364081F8E79AE00A1A8D1 /* WANetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WANetworkManager.m; sourceTree = "<group>"; };
 		1803640A1F8E7FDE00A1A8D1 /* SearchVieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVieController.h; sourceTree = "<group>"; };
 		1803640B1F8E7FDE00A1A8D1 /* SearchVieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVieController.m; sourceTree = "<group>"; };
+		180364B71FA168E500A1A8D1 /* WANetworkingManagerDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WANetworkingManagerDay.h; sourceTree = "<group>"; };
+		180364B81FA168E500A1A8D1 /* WANetworkingManagerDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WANetworkingManagerDay.m; sourceTree = "<group>"; };
+		180364BA1FA2673300A1A8D1 /* detailControllTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailControllTableViewController.h; sourceTree = "<group>"; };
+		180364BB1FA2673300A1A8D1 /* detailControllTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailControllTableViewController.m; sourceTree = "<group>"; };
+		180364BD1FA36C3A00A1A8D1 /* detailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailTableViewCell.h; sourceTree = "<group>"; };
+		180364BE1FA36C3A00A1A8D1 /* detailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailTableViewCell.m; sourceTree = "<group>"; };
 		7F4FC3A6741727431CFC18EA /* Pods_wheather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wheather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05357E2EE898715355BE517 /* Pods-wheather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wheather.release.xcconfig"; path = "Pods/Target Support Files/Pods-wheather/Pods-wheather.release.xcconfig"; sourceTree = "<group>"; };
 		D3DE0345A2F3B0E4F9671035 /* Pods-wheather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wheather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wheather/Pods-wheather.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +122,8 @@
 			children = (
 				180364071F8E79AE00A1A8D1 /* WANetworkManager.h */,
 				180364081F8E79AE00A1A8D1 /* WANetworkManager.m */,
+				180364B71FA168E500A1A8D1 /* WANetworkingManagerDay.h */,
+				180364B81FA168E500A1A8D1 /* WANetworkingManagerDay.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -129,6 +140,10 @@
 		180364051F8E778800A1A8D1 /* DetailInfo */ = {
 			isa = PBXGroup;
 			children = (
+				180364BA1FA2673300A1A8D1 /* detailControllTableViewController.h */,
+				180364BB1FA2673300A1A8D1 /* detailControllTableViewController.m */,
+				180364BD1FA36C3A00A1A8D1 /* detailTableViewCell.h */,
+				180364BE1FA36C3A00A1A8D1 /* detailTableViewCell.m */,
 			);
 			path = DetailInfo;
 			sourceTree = "<group>";
@@ -270,10 +285,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-wheather/Pods-wheather-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -287,11 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180364B91FA168E500A1A8D1 /* WANetworkingManagerDay.m in Sources */,
 				180363F51F8E765D00A1A8D1 /* wheather.xcdatamodeld in Sources */,
 				1803640C1F8E7FDE00A1A8D1 /* SearchVieController.m in Sources */,
 				180363EC1F8E765D00A1A8D1 /* AppDelegate.m in Sources */,
 				180364091F8E79AE00A1A8D1 /* WANetworkManager.m in Sources */,
 				180363E91F8E765D00A1A8D1 /* main.m in Sources */,
+				180364BF1FA36C3A00A1A8D1 /* detailTableViewCell.m in Sources */,
+				180364BC1FA2673300A1A8D1 /* detailControllTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
