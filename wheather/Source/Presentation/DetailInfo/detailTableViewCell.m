@@ -12,7 +12,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 
-@interface detailTableViewCell () <UITableViewDelegate, UITableViewDataSource, SDWebImageManagerDelegate>
+@interface detailTableViewCell ()
 
 
 
@@ -25,6 +25,7 @@
     
     
 }
+
 
 
 

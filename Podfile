@@ -7,5 +7,6 @@ target 'wheather' do
 
 pod ‘AFNetworking’
 pod 'SDWebImage'
+pod "MagicalRecord"
 
 end

@@ -12,6 +12,10 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "detailControllTableViewController.h"
 #import "detailTableViewCell.h"
+#import <MagicalRecord/MagicalRecord.h>
+#import "City+CoreDataClass.h"
+#import "City+CoreDataProperties.h"
+
 
 
 static NSInteger const kcelsius = 273.15;
@@ -29,7 +33,7 @@ static NSString const * kimageIcon = @"http://openweathermap.org/img/w/";
 @property (strong, nonatomic) IBOutlet UILabel *cloudsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *descrLabel;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *detailsViewController;
-
+@property (strong, nonatomic) NSArray * cityArray;
 
 
 
@@ -43,6 +47,14 @@ static NSString const * kimageIcon = @"http://openweathermap.org/img/w/";
     self.searchBarCity.delegate = self;
     self.tableVIewSearch.delegate = self;
     self.tableVIewSearch.dataSource = self;
+    //_cityArray = [City MR_findAll];
+    NSLog(@"%@", _cityArray);
+    NSLog(@"%lu", (unsigned long)_cityArray.count);
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated{
+    [self.tableVIewSearch reloadData];
     
 }
 
@@ -83,15 +95,18 @@ static NSString const * kimageIcon = @"http://openweathermap.org/img/w/";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return _cityArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
       static NSString *cellIden;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIden"];
     cell = [[UITableViewCell new] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIden];
-    NSString *str = @"";
-    cell.textLabel.text = str;
+    
+    
+    NSLog(@"%@", _cityArray);
+    cell.textLabel.text = [_cityArray objectAtIndex:0];
+    
     return cell;
     
 }
@@ -101,6 +116,17 @@ static NSString const * kimageIcon = @"http://openweathermap.org/img/w/";
         vc.detailSearchBarCity = _cityLable.text;
         
     }
+}
+- (IBAction)addCity:(id)sender {
+    [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext * localContext) {
+        City *cityName = [City MR_createEntity];
+                cityName.name = _cityLable.text;
+                NSLog(@"%@", cityName);
+        _cityArray = [City MR_findAll];
+        NSLog(@"%@", _cityArray);
+        NSLog(@"%lu", (unsigned long)_cityArray.count);
+        
+            }];
 }
 
 
