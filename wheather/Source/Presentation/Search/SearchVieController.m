@@ -47,9 +47,6 @@ static NSString const * kimageIcon = @"http://openweathermap.org/img/w/";
     self.searchBarCity.delegate = self;
     self.tableVIewSearch.delegate = self;
     self.tableVIewSearch.dataSource = self;
-    //_cityArray = [City MR_findAll];
-    NSLog(@"%@", _cityArray);
-    NSLog(@"%lu", (unsigned long)_cityArray.count);
     
 }
 
@@ -90,22 +87,65 @@ static NSString const * kimageIcon = @"http://openweathermap.org/img/w/";
     }];
 
 }
+- (IBAction)addCity:(id)sender {
+    [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext * localContext) {
+    
+        City *cityName = [City MR_createEntity];
+        cityName.name = _cityLable.text;
+        NSLog(@"%@", cityName);
+        self.cityArray = [City MR_findAll];
+        
+        NSLog(@"%@", _cityArray);
+        NSLog(@"%lu", (unsigned long)_cityArray.count);
+        [City MR_importFromArray:_cityArray];
+        [[NSManagedObjectContext MR_defaultContext]MR_saveToPersistentStoreAndWait];
+        
+    }];
+  
+}
+- (void)fetchNotes {
+    // Fetch Notes
+    self.cityArray = [NSMutableArray arrayWithArray:[City MR_findAll]];
+}
+
+
+
+
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _cityArray.count;
+    return 20;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
       static NSString *cellIden;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIden"];
     cell = [[UITableViewCell new] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIden];
+    City *city = [self.cityArray objectAtIndex:indexPath.row];
+  
+    if([_cityArray count] > 0 && [_cityArray count] > indexPath.row){
+        
+        [cell.textLabel setText:[city name]];
+        
+        
+        
+        NSLog(@"%@-------------------------city",city);
+        
+    }
+    else{
+
+    }
     
     
-    NSLog(@"%@", _cityArray);
-    cell.textLabel.text = [_cityArray objectAtIndex:0];
+    // Configure Cell
+   // [cell.textLabel setText:[city name]];
+    
+
+
+    NSLog(@"%@-------------------------city",city);
+
     
     return cell;
     
@@ -117,17 +157,7 @@ static NSString const * kimageIcon = @"http://openweathermap.org/img/w/";
         
     }
 }
-- (IBAction)addCity:(id)sender {
-    [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext * localContext) {
-        City *cityName = [City MR_createEntity];
-                cityName.name = _cityLable.text;
-                NSLog(@"%@", cityName);
-        _cityArray = [City MR_findAll];
-        NSLog(@"%@", _cityArray);
-        NSLog(@"%lu", (unsigned long)_cityArray.count);
-        
-            }];
-}
+
 
 
 
