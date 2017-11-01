@@ -25,7 +25,6 @@ static NSString const * weatherUrl = @"data/2.5/weather?q="; //weather
 
 @property (nonatomic, strong) AFURLSessionManager *manager;
 
-
 @end
 
 @implementation WANetworkManagerDay

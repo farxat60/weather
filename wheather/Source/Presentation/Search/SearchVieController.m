@@ -149,7 +149,6 @@ static NSString const * kimageIcon = @"http://openweathermap.org/img/w/";
     self.selectedCell = [[[tableView cellForRowAtIndexPath:indexPath]textLabel]text];
     NSLog(@"%@",_selectedCell);
     [[WANetworkManagerDay sharedInstance] loadWeatherForTownDay:_selectedCell completion:^(NSDictionary *resposeData) {
-        //          self.cityLable.text = [resposeData valueForKeyPath:@"city.name"];
         NSNumber * temperatureNumber = [[resposeData valueForKey:@"main"]objectForKey:@"temp"];
         temperatureNumber = @([temperatureNumber integerValue] - kcelsius);
         NSString * temperatureString = [temperatureNumber stringValue];
@@ -165,10 +164,6 @@ static NSString const * kimageIcon = @"http://openweathermap.org/img/w/";
         self.cloudsLabel.text = [NSString stringWithFormat:@"clouds: %@ %%",numberClouds];
         NSString * descriprions = [[[resposeData valueForKey:@"weather"]objectAtIndex:0]valueForKey:@"description"];
         self.descrLabel.text = descriprions;
-        
-        
-        
-        
     }];
     
 }

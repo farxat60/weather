@@ -11,5 +11,6 @@
 @interface detailTableViewCell : UITableViewCell  
 @property (strong, nonatomic) IBOutlet UILabel *tempDetailLbl;
 @property (strong, nonatomic) IBOutlet UIImageView *imageDetail;
+@property (strong, nonatomic) IBOutlet UIImageView *imageC;
 @property (strong, nonatomic) IBOutlet UILabel *txtDateil;
 @end

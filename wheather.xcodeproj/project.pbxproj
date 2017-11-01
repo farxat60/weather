@@ -18,6 +18,7 @@
 		180364B91FA168E500A1A8D1 /* WANetworkingManagerDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 180364B81FA168E500A1A8D1 /* WANetworkingManagerDay.m */; };
 		180364BC1FA2673300A1A8D1 /* detailControllTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180364BB1FA2673300A1A8D1 /* detailControllTableViewController.m */; };
 		180364BF1FA36C3A00A1A8D1 /* detailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180364BE1FA36C3A00A1A8D1 /* detailTableViewCell.m */; };
+		1829CFD41FAA211C00A43683 /* thermometer.png in Resources */ = {isa = PBXBuildFile; fileRef = 1829CFD31FAA211C00A43683 /* thermometer.png */; };
 		A822B22DE2B4855DD8B3ED2A /* Pods_wheather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4FC3A6741727431CFC18EA /* Pods_wheather.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		180364BB1FA2673300A1A8D1 /* detailControllTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailControllTableViewController.m; sourceTree = "<group>"; };
 		180364BD1FA36C3A00A1A8D1 /* detailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailTableViewCell.h; sourceTree = "<group>"; };
 		180364BE1FA36C3A00A1A8D1 /* detailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailTableViewCell.m; sourceTree = "<group>"; };
+		1829CFD31FAA211C00A43683 /* thermometer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thermometer.png; sourceTree = "<group>"; };
 		7F4FC3A6741727431CFC18EA /* Pods_wheather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wheather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05357E2EE898715355BE517 /* Pods-wheather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wheather.release.xcconfig"; path = "Pods/Target Support Files/Pods-wheather/Pods-wheather.release.xcconfig"; sourceTree = "<group>"; };
 		D3DE0345A2F3B0E4F9671035 /* Pods-wheather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wheather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wheather/Pods-wheather.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				180363EB1F8E765D00A1A8D1 /* AppDelegate.m */,
 				180363F01F8E765D00A1A8D1 /* Main.storyboard */,
 				180363F61F8E765D00A1A8D1 /* Assets.xcassets */,
+				1829CFD31FAA211C00A43683 /* thermometer.png */,
 				180363F81F8E765D00A1A8D1 /* LaunchScreen.storyboard */,
 				180363FB1F8E765D00A1A8D1 /* Info.plist */,
 				180363F31F8E765D00A1A8D1 /* wheather.xcdatamodeld */,
@@ -237,6 +240,7 @@
 			files = (
 				180363FA1F8E765D00A1A8D1 /* LaunchScreen.storyboard in Resources */,
 				180363F71F8E765D00A1A8D1 /* Assets.xcassets in Resources */,
+				1829CFD41FAA211C00A43683 /* thermometer.png in Resources */,
 				180363F21F8E765D00A1A8D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
