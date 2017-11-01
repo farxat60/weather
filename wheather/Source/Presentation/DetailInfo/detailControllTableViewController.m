@@ -106,41 +106,6 @@ static NSString const * kcels = @"\u00B0";
 
 @end
 
-//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    detailTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"CellIden" forIndexPath:indexPath];
-//    
-//    [[WANetworkManager sharedInstance] loadWeatherForTown:_detailCityLabel.text completion:^(NSDictionary *resposeData) {
-//        NSNumber * temperatureNumber = [[resposeData valueForKeyPath: @"list.main.temp"]objectAtIndex:0];
-//        NSLog(@"==============%@",temperatureNumber);
-//        temperatureNumber = @([temperatureNumber integerValue]);
-//        
-//        NSString * temperatureString = [temperatureNumber stringValue];
-//        self.tempString = temperatureString;
-//        
-//        NSString *numberIcon = [[[resposeData valueForKey:@"weather"]objectAtIndex:0]valueForKey:@"icon"];
-//        NSLog(@"%@=====", numberIcon);
-//        NSString *url = [NSString stringWithFormat:@"http://openweathermap.org/img/w/%@.png",numberIcon];
-//        self.imgString = url;
-//        NSString * data = [[resposeData valueForKey:@"list"]valueForKey:@"dt_txt"];
-//        
-//        NSLog(@"%@",data);
-//        self.dataStr = data;
-//        
-//        
-//        
-//    }];
-//    
-//    cell.tempDetailLbl.text = _tempString;
-//    //cell.imageDetail = _imageDet;
-//    //cell.txtDateil.text = _dataStr;
-//    
-//    
-//    
-//    NSLog(@"=============%@",_tempString);
-//    return cell;
-//    
-//    
-//}
 
 
 
