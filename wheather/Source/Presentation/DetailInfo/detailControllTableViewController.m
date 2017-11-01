@@ -20,7 +20,6 @@ static NSString const * kcels = @"\u00B0";
 @property (strong, nonatomic) IBOutlet UILabel *detailCityLabel;
 @property (strong, nonatomic) IBOutlet UITableView *tableViewDetails;
 @property (strong, nonatomic) NSString *tempString;
-//@property (strong,nonatomic) NSMutableArray * tempsStrings;
 @property (strong, nonatomic) IBOutlet UILabel *tempDetailLbl;
 @property (strong, nonatomic) IBOutlet UIImageView *imageDetail;
 @property (strong, nonatomic) IBOutlet UILabel *txtDateil;
@@ -72,60 +71,12 @@ static NSString const * kcels = @"\u00B0";
      static NSString *cellIden;
     detailTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIden forIndexPath:indexPath];
     cell = [[detailTableViewCell new] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIden];
-    //cell.tempDetailLbl.text;
     return cell;
     
     
 }
 
-
-
 @end
-//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    static NSString *cellIden;
-//    detailTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIden forIndexPath:indexPath];
-//    cell = [[detailTableViewCell new] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIden];
-//    
-//    
-//    
-//    //       [[WANetworkManager sharedInstance] loadWeatherForTown:_detailCityLabel.text completion:^(NSDictionary *resposeData) {
-//    //           NSNumber * temperatureNumber = [[resposeData valueForKeyPath: @"list.main.temp"]objectAtIndex:0];
-//    //           NSLog(@"==============%@",temperatureNumber);
-//    //           temperatureNumber = @([temperatureNumber integerValue]);
-//    //
-//    //           NSString * temperatureString = [temperatureNumber stringValue];
-//    //        self.tempString = temperatureString;
-//    //
-//    //           NSString *numberIcon = [[[resposeData valueForKey:@"weather"]objectAtIndex:0]valueForKey:@"icon"];
-//    //           NSLog(@"%@=====", numberIcon);
-//    //           NSString *url = [NSString stringWithFormat:@"http://openweathermap.org/img/w/%@.png",numberIcon];
-//    //           self.imgString = url;
-//    //           NSURL *imageUrl = [NSURL URLWithString:url];
-//    //           [cell.imageDetail sd_setImageWithURL:imageUrl];
-//    //           NSString * data = [[resposeData valueForKey:@"list"]valueForKey:@"dt_txt"];
-//    //
-//    //           NSLog(@"%@",data);
-//    //          self.dataStr = data;
-//    //           //перенести в viewdidload  и сделать датусоурс и массив со значениями после вызываю массив
-//    //           //infoplist url
-//    //
-//    //
-//    //    }];
-//    //cell.tempDetailLbl.text = _data;
-//    //cell.imageDetail = _imageDet;
-//    //cell.txtDateil.text = _dataStr;
-//    //NSString *strings = [[_dataArrey valueForKeyPath:@"list.main.temp" ]objectAtIndex:0];
-//    cell.tempDetailLbl.text = [[_dataArrey valueForKeyPath:@"list.main.temp" ]objectAtIndex:0];
-//    
-//    
-//    
-//    
-//    
-//    //NSLog(@"%@", _dataArrey);
-//    //NSLog(@"%@", [[_dataArrey valueForKeyPath:@"list.main.temp" ]objectAtIndex:0]);
-//    //NSLog(@"=============%@",_tempString);
-//    
-//    return cell;
-//    
+
 
 
