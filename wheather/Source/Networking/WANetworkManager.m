@@ -8,16 +8,20 @@
 
 #import "WANetworkManager.h"
 #import "AFNetworking.h"
+//http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=acb253427df5652a6367d50cff2e61ee
 
-static NSString const * apiKey = @"&appid=d2a6b21c943e38d9e44edcc03c9912ad";
+//static NSString const * apiKey = @"&appid=acb253427df5652a6367d50cff2e61ee";  //@"&appid=d2a6b21c943e38d9e44edcc03c9912ad";
+//
+//static NSString const * baceUrl = @"http://api.openweathermap.org/";
+//
+//static NSString const * weatherUrl = @"data/2.5/weather?q=";
+static NSString const * apiKey = @"&units=metric&appid=acb253427df5652a6367d50cff2e61ee";  //@"&appid=d2a6b21c943e38d9e44edcc03c9912ad";
 
 static NSString const * baceUrl = @"http://api.openweathermap.org/";
 
-static NSString const * weatherUrl = @"data/2.5/weather?q=";
+static NSString const * weatherUrl = @"data/2.5/forecast?q="; //weather
 
 @interface WANetworkManager  ()
-
-@property (strong, nonatomic) NSString * temperatureString;
 
 @property (nonatomic, strong) AFURLSessionManager *manager;
 
@@ -49,7 +53,7 @@ static NSString const * weatherUrl = @"data/2.5/weather?q=";
     NSURLSessionDataTask *dataTask = [self.manager dataTaskWithRequest:request
                                                      completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
-            NSLog(@"Error: %@", error);
+            
         } else {
             if (completion) {
                 NSError* error;

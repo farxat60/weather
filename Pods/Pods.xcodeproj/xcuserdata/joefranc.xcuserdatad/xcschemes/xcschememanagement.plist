@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MagicalRecord.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-wheather.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<key>018122F76773384CEF303D2A0F54541E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FFF1E05B2744FB1C817D1800BD4152B1</key>
+		<key>73AB0DBCF9F2DC2F4F43D9A58BA0FFF9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>96D028D8410E9A401CDCEFD40406EEC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

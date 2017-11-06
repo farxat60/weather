@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FFF1E05B2744FB1C817D1800BD4152B1"
+               BlueprintIdentifier = "73AB0DBCF9F2DC2F4F43D9A58BA0FFF9"
                BuildableName = "Pods_wheather.framework"
                BlueprintName = "Pods-wheather"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FFF1E05B2744FB1C817D1800BD4152B1"
+            BlueprintIdentifier = "73AB0DBCF9F2DC2F4F43D9A58BA0FFF9"
             BuildableName = "Pods_wheather.framework"
             BlueprintName = "Pods-wheather"
             ReferencedContainer = "container:Pods.xcodeproj">
